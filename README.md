@@ -6,4 +6,14 @@ https://nextjs.org/docs/getting-started/installation
 - Ejucutar la siguiente linea de comando:
 npx create-next-app@latest
 - En las preguntas pueden dejar todo por defecto (la primera y, luego puros enter)
+# Inciar mi app
+## Los comandos siempre se ejecutan en la carpeta del proyecto
+- Comando npm run build
+- Comando npm start
+- La página ya está creada en localhost.
+- Para abrir la página, por defecto está en http://localhost:3000
+## Opción RUN DEV
+- Comando npm run dev
+- La página ya está creada en localhost.
+- Para abrir la página, por defecto está en http://localhost:3000
 
