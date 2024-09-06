@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+
+      function Header({ title }) {
+        return <h1>{title ? title : "Default Title"}</h1>;
+      }
+
+      function HomePage() {
+        const [likes, setLikes] = React.useState(0);
+        const peliculas = ["La La Land", "Barbie", "Blade Runner"];
+
+        function handleClick() {
+          setLikes(likes + 1);
+        }
+
+        const buttonStyle = {
+            backgroundColor: "black",
+            color: "white",
+            borderRadius: "20px",
+          };
+
+        return (
+          <div>
+            <Header title="Peliculas de Ryan Gosling" />
+            <ul>
+              {peliculas.map((pelicula) => (
+                <li>{pelicula}</li>
+              ))}
+            </ul>
+
+            <button style={buttonStyle} onClick={handleClick}> Me gusta esto - {likes}
+            </button>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
